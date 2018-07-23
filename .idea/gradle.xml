@@ -8,12 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AndroidJokes" />
             <option value="$PROJECT_DIR$/JavaJokes" />
             <option value="$PROJECT_DIR$/androidlibrarydisplay" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/backend" />
             <option value="$PROJECT_DIR$/free" />
-            <option value="$PROJECT_DIR$/mylibrary" />
             <option value="$PROJECT_DIR$/paid" />
           </set>
         </option>

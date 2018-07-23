@@ -12,15 +12,6 @@
         <option name="BUILDABLE" value="true" />
       </configuration>
     </facet>
-    <facet type="app-engine-gradle" name="App Engine Gradle">
-      <configuration>
-        <option name="HTTP_ADDRESS" value="localhost" />
-        <option name="HTTP_PORT" value="8080" />
-        <option name="WAR_DIR" value="D:\nano\ud867-master\FinalProject\backend\build\exploded-app" />
-        <option name="WEB_APP_DIR" value="D:\nano\ud867-master\FinalProject\backend\src\main\webapp" />
-        <option name="APPENGINE_SDKROOT" value="C:\Users\boris\.gradle\appengine-sdk\appengine-java-sdk-1.9.18" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/classes/java/main" />
@@ -36,6 +27,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="JavaJokes" exported="" />
+    <orderEntry type="module" module-name="JavaJokes" exported="" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="endpoints-framework-2.0.9" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="google-api-client-appengine-1.21.0" level="project" />
