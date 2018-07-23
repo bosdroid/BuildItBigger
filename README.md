@@ -1,2 +1,2 @@
-![Preview](https://ibb.co/eqdoTd)
+![Preview](https://image.ibb.co/jiqP1y/gradle.png)
 
