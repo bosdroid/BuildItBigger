@@ -17,10 +17,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.mylibrary.JokeActivity;
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,8 +32,6 @@ public class MainActivityFragment extends Fragment {
     Toolbar toolbar;
     @BindView(R.id.adView)
     AdView mAdView;
-
-    private InterstitialAd mInterstitialAd;
 
     @Nullable
     @Override
@@ -53,21 +49,8 @@ public class MainActivityFragment extends Fragment {
                 .build();
         mAdView.loadAd(adRequest);
 
-        mInterstitialAd = new InterstitialAd(con);
-        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-        requestNewInterstitial();
-
         return view;
     }
-
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-
-        mInterstitialAd.loadAd(adRequest);
-    }
-
 
     @OnClick(R.id.main_b_show_joke)
     void showNewJoke() {
@@ -98,21 +81,7 @@ public class MainActivityFragment extends Fragment {
                     Log.e("error text", result);
                     Toast.makeText(con, result, Toast.LENGTH_SHORT).show();
                 } else {
-                    mInterstitialAd.setAdListener(new AdListener() {
-                        @Override
-                        public void onAdFailedToLoad(int errorCode) {
-                            super.onAdFailedToLoad(errorCode);
-                            requestNewInterstitial();
-                            showJokeOnUI(result);
-                        }
-
-                        @Override
-                        public void onAdClosed() {
-                            requestNewInterstitial();
-                            showJokeOnUI(result);
-                        }
-                    });
-                    mInterstitialAd.show();
+                    showJokeOnUI(result);
                 }
             }
         });
